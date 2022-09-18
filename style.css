@@ -1,0 +1,188 @@
+:root {
+  --border-color: hsl(182, 25%, 50%);
+  --text-color: #333;
+  --light-border: #404040;
+  --light-bg:#f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 0.4fr 0.5fr 1fr 3.5fr 0.5fr;
+  /* gap: 0px 0px; */
+}
+
+.Boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'SURF-Report--MERN SURF-Report--MERN'
+    'LED--Node Calculator-'
+    'Pastels Run-Buddy';
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.menu {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--border-color);
+  text-decoration: underline 5px solid var(--border-color);
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+  list-style: none;
+}
+
+a {
+  color: var(--border-color);
+  padding: 5px;
+  text-decoration: none;
+}
+
+.card-text {
+  color: var(--text-color);
+  background: var(--border-color);
+  width: fit-content;
+  height: 25%;
+}
+
+.SURF-Report--MERN {
+  background: url('./images/surf.jpeg') no-repeat center center/cover;
+  border: 5px solid var(--border-color);
+  margin: 5px;
+  grid-area: SURF-Report--MERN;
+}
+
+.LED--Node {
+  background: url('./images/iot.jpg') no-repeat center center/cover;
+  border: 5px solid var(--border-color);
+  margin: 5px;
+  grid-area: LED--Node;
+}
+
+.Calculator- {
+  background: url('./images/Calculator.jpg') no-repeat center center/cover;
+  border: 5px solid var(--border-color);
+  margin: 5px;
+  grid-area: Calculator-;
+}
+
+.Pastels {
+  background: url('./images/Pastels.jpg') no-repeat center center/cover;
+  border: 5px solid var(--border-color);
+  margin: 5px;
+  grid-area: Pastels;
+}
+
+.Run-Buddy {
+  background: url('./images/Run\ Buddy.jpg') no-repeat center center/cover;
+  border: 5px solid var(--border-color);
+  margin: 5px;
+  grid-area: Run-Buddy;
+}
+
+.SURF-Report--MERN:hover,
+.LED--Node:hover,
+.Calculator-:hover,
+.Pastels:hover,
+.Run-Buddy:hover
+{
+ cursor:pointer;
+ opacity:0.8;
+}
+
+.Header {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.Contact-Flex-container {
+  grid-area: 5 / 2 / 6 / 3;
+}
+
+.Contact-Me {
+  grid-area: 5 / 1 / 6 / 2;
+  border-right: 5px solid var(--light-border);
+  border-top: 5% solid #fff;
+   color: var(--border-color);
+  font-size: 30px;
+  padding:5px;
+}
+
+.Work {
+  grid-area: 4 / 1 / 5 / 2;
+  align-content: flex-start;
+  border-right: 5px solid var(--light-border);
+  color: var(--border-color);
+  font-size: 30px;
+
+}
+
+.About-me {
+  grid-area: 3 / 1 / 4 / 2;
+  border-right: 5px solid var(--light-border);
+  margin-bottom: 10px;
+  color: var(--border-color);
+  font-size: 30px;
+}
+
+.About-me-content {
+  grid-area: 3 / 2 / 4 / 3;
+  padding: 5px;
+  align-items: flex-start;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2rem;
+}
+
+.Cool-Subtitle {
+  background: url('./images/stripe.jpg') no-repeat center center/cover;
+  grid-area: 2 / 1 / 3 / 3;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+
+}
+.Cool-Subtitle h3 {
+  border-radius: 10px;
+  background: var(--border-color);
+  color: var(--light-border);
+  padding: 10px;
+}
+
+.Header-Menu {
+  grid-area: 1 / 2 / 2 / 3;
+  background: var(--text-color);
+}
+
+.Name {
+  grid-area: 1 / 1 / 2 / 2;
+  background: var(--text-color);
+  color: var(--border-color);
+}
+
+.Name h1 {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.footer-contact{
+ background: #fff;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--border-color);
+  text-decoration: underline 5px solid var(--border-color);
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
