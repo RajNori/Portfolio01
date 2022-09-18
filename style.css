@@ -1,7 +1,7 @@
 :root {
   --border-color: hsl(182, 25%, 50%);
   --text-color: #333;
-  --light-border: #404040;
+  --light-border:#d3d3d3;
   --light-bg:#f4f4f4;
 }
 
@@ -18,15 +18,14 @@ body{
 .container {
   display: grid;
   grid-template-columns: 0.4fr 1.6fr;
-  grid-template-rows: 0.4fr 0.5fr 1fr 3.5fr 0.5fr;
-  /* gap: 0px 0px; */
+  grid-template-rows: 0.4fr 0.5fr 1fr 9.5fr 0.5fr;
+  gap: 0px 0px;
 }
 
 .Boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
   grid-template-areas:
     'SURF-Report--MERN SURF-Report--MERN'
     'LED--Node Calculator-'
@@ -60,7 +59,12 @@ a {
   color: var(--text-color);
   background: var(--border-color);
   width: fit-content;
-  height: 25%;
+  margin: 1px;
+  line-height: 1.6rem;
+  border-radius: 5px;
+  padding-left: 1px;
+  width: 6rem;
+  
 }
 
 .SURF-Report--MERN {
@@ -119,15 +123,15 @@ a {
 .Contact-Me {
   grid-area: 5 / 1 / 6 / 2;
   border-right: 5px solid var(--light-border);
-  border-top: 5% solid #fff;
-   color: var(--border-color);
+  color: var(--border-color);
   font-size: 30px;
   padding:5px;
+  text-align:center;
 }
 
 .Work {
   grid-area: 4 / 1 / 5 / 2;
-  align-content: flex-start;
+  align-content: center;
   border-right: 5px solid var(--light-border);
   color: var(--border-color);
   font-size: 30px;
@@ -191,4 +195,14 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
+}
+
+@media screen and(max-width:1200px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
